@@ -12,7 +12,7 @@ function PageIndicator({ pymeName = "Empresa S.A" }: PageIndicatorProps) {
     "/radiography": "Radiography",
     "/tips": "Tips",
     "/tools": "Tools",
-    "/expand": "Expand",
+    "/connect": "Connect",
     "/profile": "Profile",
   };
 

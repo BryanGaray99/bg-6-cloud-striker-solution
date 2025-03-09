@@ -1,0 +1,39 @@
+.profile-container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .profile-option {
+    background: white;
+    padding: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .profile-option:last-child {
+    border-bottom: none;
+  }
+  
+  .profile-option:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Logout Button */
+  .logout {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+  }
+  .logout:hover {
+    background: #ffe0e0;
+  }
+  
+    
+.pages-container {
+  margin-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

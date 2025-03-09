@@ -27,15 +27,14 @@ function Tips() {
   };
 
   return (
-    <div className="tips-container">
-      {/* Dropdown Menu */}
+    <div className="tips-containe pages-containerr">
+
       <select className="dropdown" value={category} onChange={(e) => setCategory(e.target.value)}>
         <option value="Recomendado">Recomendado</option>
         <option value="Popular">Popular</option>
         <option value="Nuevos">Nuevos</option>
       </select>
 
-      {/* Video Carousel with State */}
       <div className="video-carousel">
         <button className="nav-button left" onClick={handlePrev}>
           <FaChevronLeft />
@@ -53,7 +52,6 @@ function Tips() {
         </button>
       </div>
 
-      {/* Articles List */}
       <div className="articles">
         {articles.map((article, index) => (
           <div key={index} className="article-item">

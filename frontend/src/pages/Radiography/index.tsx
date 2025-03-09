@@ -15,12 +15,13 @@ const Radiography: React.FC = () => {
   }, []);
 
   return (
-    <div className="radiography-container">
+    <div className="radiography-container pages-container">
       <h2>Welcome, {name}!</h2>
       <h3>Your Business: {business}</h3>
-      <ScoreCard score={100} />
+      <ScoreCard score={150} />
       <ProgressBar name={'Indice de estabilidad crediticia'} score={80} />
-      <ProgressBar name={'Velocidad de crecimiento'} score={60} />
+      <ProgressBar name={'Velocidad de crecimiento'} score={20} />
+      <ProgressBar name={'Presencia en redes'} score={20} />
     </div>
   );
 };

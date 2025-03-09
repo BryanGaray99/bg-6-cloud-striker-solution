@@ -33,7 +33,7 @@ function Navbar() {
         onClick={() => handleClick("/radiography")}
         className={`nav-button center-icon ${active === "/radiography" ? "active" : ""}`}
       >
-        <FaCircleNotch size={36} />
+        <FaCircleNotch size={36} color=" #d00067" />
       </button>
 
       <button
@@ -43,8 +43,8 @@ function Navbar() {
         <FaUser size={24} />
       </button>
       <button
-        onClick={() => handleClick("/expand")}
-        className={`nav-button ${active === "/expand" ? "active" : ""}`}
+        onClick={() => handleClick("/connect")}
+        className={`nav-button ${active === "/connect" ? "active" : ""}`}
       >
         <FaUser size={24} />
       </button>

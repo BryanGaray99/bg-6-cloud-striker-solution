@@ -9,14 +9,13 @@ const providers = [
 
 function Tools() {
   return (
-    <div className="tools-container">
-      {/* Large Buttons */}
+    <div className="tools-container pages-container">
+      
       <div className="large-buttons">
         <button className="large-button">Créditos</button>
         <button className="large-button">Peigo</button>
       </div>
 
-      {/* Providers Section */}
       <div className="providers-section">
         <p className="providers-title">Providers</p>
         <div className="providers-grid">

@@ -1,40 +1,41 @@
-.tools-container {
+.connect-container {
     text-align: center;
     padding: 20px;
+    width: 100%;
   }
   
-  .large-buttons {
+  /* Search Bar */
+  .search-bar {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
     align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .large-button {
-    width: 80%;
-    max-width: 300px;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
+    justify-content: space-between;
     background: white;
     border-radius: 15px;
-    border: none;
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
   }
   
-  .large-button:hover {
-    background: #f5f5f5;
+  .search-bar input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
   }
   
-  /* Providers Section */
-  .providers-section {
+  .search-icon {
+    color: black;
+  }
+  
+  /* Section Titles */
+  .section {
     text-align: left;
     margin-top: 20px;
   }
   
-  .providers-title {
+  .section-title {
     background: lightgray;
     padding: 8px 15px;
     display: inline-block;
@@ -42,8 +43,8 @@
     font-weight: bold;
   }
   
-  /* Grid Layout for Providers */
-  .providers-grid {
+  /* Featured Business Grid */
+  .business-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -51,19 +52,36 @@
     justify-content: center;
   }
   
-  .provider-card {
+  .business-card {
     background: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
     border-radius: 15px;
+    border: 2px solid #d00067;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
   
-  .provider-card:hover {
+  .business-card:hover {
     background: #f5f5f5;
+  }
+  
+  .cta-button {
+    background: #d00067;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background: #a00050;
   }
   
   .pages-container {

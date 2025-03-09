@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Onboarding from "./components/Onboarding";
 import Navbar from "./components/Navbar";
 import PageIndicator from "./components/PageIndicator";
-import Expand from "./pages/Expand";
+import Connect from "./pages/Connect";
 import Radiography from "./pages/Radiography";
 import Profile from "./pages/Profile";
 import Tips from "./pages/Tips";
@@ -21,10 +21,11 @@ function App() {
             <Route path="/*" element={<Onboarding setUserData={setUserData} />} />
           ) : (
             <>
+
               <Route path="/radiography" element={<Radiography />} />
               <Route path="/tips" element={<Tips />} />
               <Route path="/tools" element={<Tools />} />
-              <Route path="/expand" element={<Expand />} />
+              <Route path="/connect" element={<Connect />} />
               <Route path="/profile" element={<Profile />} />
             </>
           )}
