@@ -1,0 +1,70 @@
+.tools-container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /* Large Buttons */
+  .large-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .large-button {
+    width: 80%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: white;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .large-button:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Providers Section */
+  .providers-section {
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .providers-title {
+    background: lightgray;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 15px;
+    font-weight: bold;
+  }
+  
+  /* Grid Layout for Providers */
+  .providers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+  }
+  
+  .provider-card {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .provider-card:hover {
+    background: #f5f5f5;
+  }
+  
