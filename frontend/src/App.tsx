@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Onboarding from './components/Onboarding';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Radiography from './pages/Radiography';
-import Improvements from './pages/Improvements';
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Onboarding from "./components/Onboarding";
+import Navbar from "./components/Navbar";
+import PageIndicator from "./components/PageIndicator";
+import Home from "./pages/Home";
+import Radiography from "./pages/Radiography";
+import Improvements from "./pages/Improvements";
 
 function App() {
   const [userData, setUserData] = useState<{ name: string; business: string; dni: string } | null>(null);
@@ -12,6 +13,7 @@ function App() {
   return (
     <Router>
       <div className="app-container">
+        {userData && <PageIndicator pymeName={userData.business || "Empresa S.A"} />}
         <Routes>
           {!userData ? (
             <Route path="/*" element={<Onboarding setUserData={setUserData} />} />
