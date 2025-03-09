@@ -13,7 +13,7 @@ function PageIndicator({ pymeName = "Empresa S.A" }: PageIndicatorProps) {
     "/tips": "Tips",
     "/tools": "Tools",
     "/expand": "Expand",
-    "/profile": "Improvement Opportunities",
+    "/profile": "Profile",
   };
 
   const currentTitle = pageTitles[location.pathname] || "Dashboard";
