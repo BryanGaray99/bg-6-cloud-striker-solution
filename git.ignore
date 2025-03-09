@@ -1,0 +1,13 @@
+# Terraform archivos que no deben subirse a GitHub
+Infraestructura/terraform.tfstate
+Infraestructura/terraform.tfstate.backup
+Infraestructura/.terraform/
+Infraestructura/.terraform.lock.hcl
+
+# Variables sensibles (ejemplo: credenciales)
+*.tfvars
+*.auto.tfvars
+
+# Claves privadas y certificados
+*.pem
+*.key
