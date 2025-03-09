@@ -1,0 +1,24 @@
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .score-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .status {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 6px;
+  }
+  
+  .source {
+    font-size: 10px;
+    color: #999;
+    font-style: italic;
+  }
+  
