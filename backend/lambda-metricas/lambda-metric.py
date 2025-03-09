@@ -19,7 +19,7 @@ def lambda_handler(event, context):
 
     analyzer = SentimentIntensityAnalyzer()
 
-    # 1) ÍNDICE DE SATISFACCIÓN DIGITAL
+   
     google_reviews = google_data.get("reviews", [])
     ratings = []
     sentiments = []
@@ -37,7 +37,7 @@ def lambda_handler(event, context):
     sent_score = (avg_sentiment + 1) * 50  
     indice_satisfaccion = (rating_score * 0.6) + (sent_score * 0.4)
 
-    # 2) TASA DE PARTICIPACIÓN (ENGAGEMENT RATE)
+    
     fb_followers = facebook_data.get("followers", 0)
     fb_likes = facebook_data.get("avg_likes_per_post", 0)
     fb_comments = facebook_data.get("avg_comments_per_post", 0)
@@ -55,7 +55,7 @@ def lambda_handler(event, context):
 
     engagement_rate = (total_interactions / total_followers) * 100 if total_followers > 0 else 0.0
 
-    # 3) VELOCIDAD DE RESPUESTA Y RESOLUCIÓN
+    
     fb_response = facebook_data.get("avg_response_time_minutes", 0)
     ig_response = instagram_data.get("avg_response_time_minutes", 0)
     li_response = linkedin_data.get("avg_response_time_minutes", 0)
@@ -72,7 +72,7 @@ def lambda_handler(event, context):
     else:
         velocidad_respuesta = 40
 
-    # 4) CONVERSION DE SEGUIDORES A CLIENTES
+    
     fb_leads = facebook_data.get("leads_generated", 0)
     fb_converted = facebook_data.get("leads_converted", 0)
     ig_leads = instagram_data.get("leads_generated", 0)
@@ -84,7 +84,7 @@ def lambda_handler(event, context):
     total_converted = fb_converted + ig_converted + li_converted
     conversion = (total_converted / total_leads) * 100 if total_leads > 0 else 0.0
 
-    # ESCALAR CADA METRICA A 0-100
+   
     m1 = min(max(indice_satisfaccion, 0), 100)  
     m2 = min(max(engagement_rate, 0), 100)     
     m3 = min(max(velocidad_respuesta, 0), 100)
