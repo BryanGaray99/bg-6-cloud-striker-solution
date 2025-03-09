@@ -1,0 +1,41 @@
+name: Deploy AWS Lambda
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: Instalar dependencias
+        run: |
+          
+          cp -r lambda-metric/lambda-metric.py package/
+          
+
+      - name: Empaquetar en ZIP
+        run: |
+          cd package
+          zip -r ../lambda-metric.zip .
+
+      - name: Configurar credenciales de AWS
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Subir Lambda a AWS
+        run: |
+          aws lambda update-function-code --function-name ${{ secrets.LAMBDA_FUNCTION_NAME }} --zip-file fileb://lambda-metric.zip
