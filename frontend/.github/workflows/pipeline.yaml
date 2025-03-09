@@ -32,5 +32,5 @@ jobs:
           aws-region: us-east-1  
 
       - name: Subir archivos a S3
-        run: aws s3 sync build/ s3://mi-app-react-s3 --delete
+        run: aws s3 sync build/ s3://bukethackaton --delete
 
