@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ScoreCard from "../../components/ScoreCard";
+import ProgressBar from "../../components/ProgressBar";
 
 const Radiography: React.FC = () => {
   const [name, setName] = useState("Guest");
@@ -18,12 +19,8 @@ const Radiography: React.FC = () => {
       <h2>Welcome, {name}!</h2>
       <h3>Your Business: {business}</h3>
       <ScoreCard score={100} />
-      <ScoreCard score={300} />
-      <ScoreCard score={800} />
-      <ScoreCard score={500} />
-      <ScoreCard score={700} />
-      <ScoreCard score={200} />
-      <ScoreCard score={400} />
+      <ProgressBar name={'Indice de estabilidad crediticia'} score={80} />
+      <ProgressBar name={'Velocidad de crecimiento'} score={60} />
     </div>
   );
 };

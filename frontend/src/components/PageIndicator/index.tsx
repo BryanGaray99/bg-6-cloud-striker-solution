@@ -7,11 +7,13 @@ interface PageIndicatorProps {
 
 function PageIndicator({ pymeName = "Empresa S.A" }: PageIndicatorProps) {
   const location = useLocation();
-  
+
   const pageTitles: { [key: string]: string } = {
-    "/home": "Dashboard",
     "/radiography": "Radiography",
-    "/improvements": "Improvement Opportunities",
+    "/tips": "Tips",
+    "/tools": "Tools",
+    "/expand": "Expand",
+    "/profile": "Improvement Opportunities",
   };
 
   const currentTitle = pageTitles[location.pathname] || "Dashboard";

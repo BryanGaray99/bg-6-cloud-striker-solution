@@ -6,9 +6,11 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <button onClick={() => navigate('/home')}>Home</button>
       <button onClick={() => navigate('/radiography')}>Radiography</button>
-      <button onClick={() => navigate('/improvements')}>Improvements</button>
+      <button onClick={() => navigate('/tips')}>Tips</button>
+      <button onClick={() => navigate('/tools')}>Tools</button>
+      <button onClick={() => navigate('/expand')}>Expand</button>
+      <button onClick={() => navigate('/profile')}>Profile</button>
     </div>
   );
 }

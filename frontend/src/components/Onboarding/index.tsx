@@ -14,7 +14,7 @@ function Onboarding({ setUserData }: OnboardingProps) {
   const handleSubmit = () => {
     if (name && business && dni) {
       setUserData({ name, business, dni });
-      navigate('/home');
+      navigate('/expand');
     }
   };
 

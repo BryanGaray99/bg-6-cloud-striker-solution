@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Onboarding from "./components/Onboarding";
 import Navbar from "./components/Navbar";
 import PageIndicator from "./components/PageIndicator";
-import Home from "./pages/Home";
+import Expand from "./pages/Expand";
 import Radiography from "./pages/Radiography";
-import Improvements from "./pages/Improvements";
+import Profile from "./pages/Profile";
+import Tips from "./pages/Tips";
+import Tools from "./pages/Tools";
 
 function App() {
   const [userData, setUserData] = useState<{ name: string; business: string; dni: string } | null>(null);
@@ -19,9 +21,11 @@ function App() {
             <Route path="/*" element={<Onboarding setUserData={setUserData} />} />
           ) : (
             <>
-              <Route path="/home" element={<Home />} />
               <Route path="/radiography" element={<Radiography />} />
-              <Route path="/improvements" element={<Improvements />} />
+              <Route path="/tips" element={<Tips />} />
+              <Route path="/tools" element={<Tools />} />
+              <Route path="/expand" element={<Expand />} />
+              <Route path="/profile" element={<Profile />} />
             </>
           )}
         </Routes>
